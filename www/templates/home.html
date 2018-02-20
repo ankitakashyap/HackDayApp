@@ -1,0 +1,80 @@
+<ion-view view-title="home">
+   <div class="bar bar-header bar-dark">
+			<button class="button button-icon icon ion-navicon" ng-click="login()"></button>
+			<h1 class="title"><img src="img/walmart_icon.png" width="7%" high="7%" /><b>SyncCart VA</b></h1>
+	</div>
+    <ion-content>
+    		<div style="margin-top:13%;width: 95%;margin-left: 2%;">
+				<div class="card"  >
+				  <div class="item item-text-wrap">
+					  <p style="font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,' sans-serif'">"You know <b>you are in love when</b> the two of you can go grocery <b>shopping together</b>."</p><p style="font-style:italic; text-align: right;">-Woody Harrelson</p>
+				</div>
+				</div>
+			
+				
+			</div>
+  
+			<div style="margin-top:-5%">
+				
+				
+				
+				<div class="row">
+				  <div class="col">
+					  <button   class="button button-block button-balanced"  ng-click="gotoCreateGroup()" >
+						  <i class = "icon icon ion-ios-people"></i> 
+						  <p>Create Group</p>
+					  </button>
+			  	 </div>
+				  <div class="col">
+						<button class="button button-block button-energized" ng-click="scan()">
+						  <i class = "icon icon ion-ios-people-outline"></i>
+						  <p>Join Group</p>
+						</button>		
+				  </div>
+				</div>
+				
+				<div class="row">
+				  <div class="col">
+					  <button class="button button-block button-royal" ng-click="record()">
+						  <i class = "icon icon ion-mic-c" ></i>
+						  <p>Virtual Assistant</p>
+						</button>
+			  	 </div>
+				  <div class="col">
+						<button class="button button-block button-calm" ng-click="scanAndGo()">
+						  <i class = "icon icon ion-qr-scanner"></i>
+							<p>Scan &amp; Go</p>
+						</button>		
+				  </div>
+				</div>
+				
+			
+			</div>
+	
+			
+			<!--qr type-number="8" correction-level="'M'" size="200" input-mode="'ALPHA_NUM'" text="string" image="true"></qr-->
+			<div class="card" ng-click="gotoShoppingCart()">
+				<div class="item item-divider">
+					Group Shopping History
+				</div>
+				<div class="item item-text-wrap">
+					<!--select id="select"></select>
+					<select name="singleSelect" id="singleSelect" ng-model="$root.userID">
+					  <option value="Jinzhi">Jinzhi</option>
+					  <option value="Akhil">Akhil</option>
+					  <option value="Ankita">Ankita</option>
+					  <option value="Charles">Charles</option>
+					  <option value="Josh">Josh</option>
+					  <option value="Ravi">Ravi</option>
+					  {{scanResults}}
+					{{recognizedText}}
+					</select-->
+					
+					
+					<canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+					</canvas> 
+				</div>
+			</div>
+		
+    </ion-content>
+</ion-view>

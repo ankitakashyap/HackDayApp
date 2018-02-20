@@ -1,0 +1,29 @@
+
+  <!-- The title of the ion-view will be shown on the navbar -->
+  <ion-view view-title="createGroup">
+   <div class="bar bar-header bar-dark">
+			<a class="button icon-left ion-chevron-left button-clear button-white" ng-click="gotoHome()">Back</a>
+			<h1 class="title"><img src="img/walmart_icon.png" width="7%" high="7%" /><b>SyncCart VA</b></h1>
+	</div>
+    <ion-content style="margin-top:30%">
+     
+      <!-- The content of the page -->
+      <div class="card">
+		  <div class="item item-text-wrap" style="background-color: aquamarine;">
+			<h3>"Share the following QR code with your family/friend to shop together"</h3>
+		  </div>
+		</div>
+      
+        <div class="card">
+		  <div class="item item-text-wrap">
+		  	<button class="button" ng-click="shareAnywhere()">Share</button>
+			<qrcode data="{{groupID}}"  size="200" style="margin-left:22%"></qrcode>
+		  </div>
+		</div>
+	 
+     
+    </ion-content>
+  </ion-view>
+
+
+

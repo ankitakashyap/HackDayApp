@@ -1,0 +1,38 @@
+
+  <!-- The title of the ion-view will be shown on the navbar -->
+  <ion-view view-title="checkOut">
+   <div class="bar bar-header bar-dark">
+			<a class="button icon-left ion-chevron-left button-clear button-white" ng-click="gotoHome()">Back</a>
+			<h1 class="title"><img src="img/walmart_icon.png" width="7%" high="7%" /><b>SyncCart VA</b></h1>
+			
+	</div>
+    <ion-content style="margin-top:15%">
+    
+    <div ng-repeat="(key, value) in shoppingCart | groupBy: 'addedBy'" ng-if="$index >= 1">
+		<div class="list">
+			<div class="item item-divider">
+				{{key}}
+			</div>
+			
+		  <a class="item item-thumbnail-left"  ng-repeat="item in value">
+		  	<img ng-src={{"http://52.86.109.77:8081"+item.image}}>
+			<h2>{{item.name}}<span class="badge badge-assertive">{{item.quantity}}</span></h2>
+			<p>Price: ${{item.price | number:2}}</p>
+			<p>Total: ${{item.price*item.quantity | number:2}}</p>
+			
+		  </a>
+		</div>
+	</div>
+    
+    
+
+   
+    </ion-content>
+    <div class="bar bar-footer bar-balanced" ng-click="gotoConfirmation()">
+    	<span style="text-align: left;">Total:${{$root.totalPrice | number:2}}</span>
+		<div class="title">Checkout</div>
+	</div>
+  </ion-view>
+
+
+

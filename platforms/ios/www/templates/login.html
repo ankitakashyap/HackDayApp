@@ -1,0 +1,17 @@
+<ion-view view-title="Login" name="login-view">
+    <div class="bar bar-header bar-dark">
+			<button class="button button-icon icon ion-navicon" ng-click="login()"></button>
+			<h1 class="title"><img src="img/walmart_icon.png" width="7%" high="7%" /><b>SyncCart VA</b></h1>
+	</div>
+  <ion-content class="padding" style="margin-top:13%;">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="$root.userID"/>
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password"/>
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
+  </ion-content>
+</ion-view>

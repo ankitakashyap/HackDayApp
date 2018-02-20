@@ -1,0 +1,24 @@
+<ion-view view-title="shoppingCart">
+
+		<div class="bar bar-header bar-dark">
+		  <button class="button button-icon icon ion-navicon" ng-click="gotoHome()"></button>
+		  <h1 class="title"><img src="img/walmart_icon.png" width="7%" high="7%" /><b>SyncCart VA</b></h1>
+		  <button class="button button-icon" ng-click="gotoCheckOut()"><i class = "icon icon ion-android-cart" ></i><span class="badge badge-assertive">{{$root.itemCount}}</span></button>
+		  
+		</div>
+		<div style="margin-top:15%">
+    	<div ng-repeat="cart in shoppingCart" ng-if="$index >= 1">
+			<a class="item item-thumbnail-left" href="#">
+			  <img ng-src={{"http://52.86.109.77:8081"+cart.image}}>
+				<h2>{{cart.name}}<span class="badge badge-assertive">{{cart.quantity}}</span></h2>
+			  <p>${{cart.price}}</p>
+			  <p>Added by {{cart.addedBy}}</p>
+			</a>
+		</div>
+	</div>
+	
+	<div class="bar bar-footer bar-calm" ng-click="scan()">
+		<div class="title">Scan</div>
+	</div>
+	
+</ion-view>
